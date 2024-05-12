@@ -1,0 +1,84 @@
+<!-- pages/home/home.component.html -->
+<div>
+  <div *ngIf="profile; else notLoggedIn">
+    <app-navbar/>
+    
+    <div class="container-fluid">
+      <div class="row">
+        <app-sidebar class="col-md-3 col-lg-2 p-0 bg-dark" [pageName]="pageName"/>
+        <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+          <div class="dashboard d-flex justify-content-between flex-wrap flex-md-nowrap align-items-center pt-3 pb-2 mb-3 border-bottom">
+            <h1 class="h2">{{ greeting }}, {{ profile.name }}</h1>
+            <img class="rounded-circle" [src]="profile.picture" alt="Photo de profil">
+          </div>
+    
+          <div class="datas row">
+            <div class="col-lg-6 col-md-12" *ngIf="weatherData">
+              <div class="weather-card h-100 d-flex flex-column justify-content-evenly">
+                <div class="weather-info d-flex justify-content-between align-items-center">
+                  <div>
+                    <p class="weather-large">{{ weatherData.name }}</p>
+                    <p class="fs-3">{{ weatherData.date }}</p>
+                    <div>
+                      <p class="weather-large">
+                        {{ weatherData.temperature }}°
+                      </p>
+                      <p class="fs-3">{{ weatherData.weather | titlecase}}</p>
+                    </div>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <img [src]="'http://openweathermap.org/img/wn/' + weatherData.weatherIcon + '.png'" class="weather-icon" alt="Weather Icon">
+                    <span class="fs-5">{{ weatherData.minTemperature }}°/ {{ weatherData.maxTemperature }}°</span>
+                  </div>
+                </div>
+                <div class="weather-details d-flex align-items-center justify-content-between">
+                  <div class="d-flex flex-column align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-wind me-1 mb-2" viewBox="0 0 16 16">
+                      <path d="M12.5 2A2.5 2.5 0 0 0 10 4.5a.5.5 0 0 1-1 0A3.5 3.5 0 1 1 12.5 8H.5a.5.5 0 0 1 0-1h12a2.5 2.5 0 0 0 0-5m-7 1a1 1 0 0 0-1 1 .5.5 0 0 1-1 0 2 2 0 1 1 2 2h-5a.5.5 0 0 1 0-1h5a1 1 0 0 0 0-2M0 9.5A.5.5 0 0 1 .5 9h10.042a3 3 0 1 1-3 3 .5.5 0 0 1 1 0 2 2 0 1 0 2-2H.5a.5.5 0 0 1-.5-.5"/>
+                    </svg>
+                    <p class="weather-medium">{{ weatherData.windSpeed }} km/h</p>
+                    <p class="fs-5">Vent</p>
+                  </div>
+                  <div class="d-flex flex-column align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-umbrella" viewBox="0 0 16 16">
+                      <path d="M8 0a.5.5 0 0 1 .5.5v.514C12.625 1.238 16 4.22 16 8c0 0 0 .5-.5.5-.149 0-.352-.145-.352-.145l-.004-.004-.025-.023a3.5 3.5 0 0 0-.555-.394A3.17 3.17 0 0 0 13 7.5c-.638 0-1.178.213-1.564.434a3.5 3.5 0 0 0-.555.394l-.025.023-.003.003s-.204.146-.353.146-.352-.145-.352-.145l-.004-.004-.025-.023a3.5 3.5 0 0 0-.555-.394 3.3 3.3 0 0 0-1.064-.39V13.5H8h.5v.039l-.005.083a3 3 0 0 1-.298 1.102 2.26 2.26 0 0 1-.763.88C7.06 15.851 6.587 16 6 16s-1.061-.148-1.434-.396a2.26 2.26 0 0 1-.763-.88 3 3 0 0 1-.302-1.185v-.025l-.001-.009v-.003s0-.002.5-.002h-.5V13a.5.5 0 0 1 1 0v.506l.003.044a2 2 0 0 0 .195.726c.095.191.23.367.423.495.19.127.466.229.879.229s.689-.102.879-.229c.193-.128.328-.304.424-.495a2 2 0 0 0 .197-.77V7.544a3.3 3.3 0 0 0-1.064.39 3.5 3.5 0 0 0-.58.417l-.004.004S5.65 8.5 5.5 8.5s-.352-.145-.352-.145l-.004-.004a3.5 3.5 0 0 0-.58-.417A3.17 3.17 0 0 0 3 7.5c-.638 0-1.177.213-1.564.434a3.5 3.5 0 0 0-.58.417l-.004.004S.65 8.5.5 8.5C0 8.5 0 8 0 8c0-3.78 3.375-6.762 7.5-6.986V.5A.5.5 0 0 1 8 0M6.577 2.123c-2.833.5-4.99 2.458-5.474 4.854A4.1 4.1 0 0 1 3 6.5c.806 0 1.48.25 1.962.511a9.7 9.7 0 0 1 .344-2.358c.242-.868.64-1.765 1.271-2.53m-.615 4.93A4.16 4.16 0 0 1 8 6.5a4.16 4.16 0 0 1 2.038.553 8.7 8.7 0 0 0-.307-2.13C9.434 3.858 8.898 2.83 8 2.117c-.898.712-1.434 1.74-1.731 2.804a8.7 8.7 0 0 0-.307 2.131zm3.46-4.93c.631.765 1.03 1.662 1.272 2.53.233.833.328 1.66.344 2.358A4.14 4.14 0 0 1 13 6.5c.77 0 1.42.23 1.897.477-.484-2.396-2.641-4.355-5.474-4.854z"/>
+                    </svg>
+                    <p class="weather-medium">{{ weatherData.rain }} mm</p>
+                    <p class="fs-5">Précipitations</p>
+                  </div>                  
+                  <div class="d-flex flex-column align-items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-droplet me-1 mb-2" viewBox="0 0 16 16">
+                      <path fill-rule="evenodd" d="M7.21.8C7.69.295 8 0 8 0q.164.544.371 1.038c.812 1.946 2.073 3.35 3.197 4.6C12.878 7.096 14 8.345 14 10a6 6 0 0 1-12 0C2 6.668 5.58 2.517 7.21.8m.413 1.021A31 31 0 0 0 5.794 3.99c-.726.95-1.436 2.008-1.96 3.07C3.304 8.133 3 9.138 3 10a5 5 0 0 0 10 0c0-1.201-.796-2.157-2.181-3.7l-.03-.032C9.75 5.11 8.5 3.72 7.623 1.82z"/>
+                      <path fill-rule="evenodd" d="M4.553 7.776c.82-1.641 1.717-2.753 2.093-3.13l.708.708c-.29.29-1.128 1.311-1.907 2.87z"/>
+                    </svg>
+                    <p class="weather-medium">{{ weatherData.humidity }} %</p>
+                    <p class="fs-5">Humidité</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <app-map class="col-lg-6 col-md-12" (locationFound)="onLocationFound($event)"/>
+          </div>
+        </main>
+      </div>
+    </div>
+  </div>
+
+  <ng-template #notLoggedIn>
+    <div class="login-page d-flex flex-column align-items-center justify-content-center text-center">
+      <div class="d-flex">
+        <h1 class="offcanvas-title" id="sidebarMenuLabel">WeatherApp</h1>
+        <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-cloud-sun-fill mx-2" viewBox="0 0 16 16">
+          <path d="M11.473 11a4.5 4.5 0 0 0-8.72-.99A3 3 0 0 0 3 16h8.5a2.5 2.5 0 0 0 0-5z"/>
+          <path d="M10.5 1.5a.5.5 0 0 0-1 0v1a.5.5 0 0 0 1 0zm3.743 1.964a.5.5 0 1 0-.707-.707l-.708.707a.5.5 0 0 0 .708.708zm-7.779-.707a.5.5 0 0 0-.707.707l.707.708a.5.5 0 1 0 .708-.708zm1.734 3.374a2 2 0 1 1 3.296 2.198q.3.423.516.898a3 3 0 1 0-4.84-3.225q.529.017 1.028.129m4.484 4.074c.6.215 1.125.59 1.522 1.072a.5.5 0 0 0 .039-.742l-.707-.707a.5.5 0 0 0-.854.377M14.5 6.5a.5.5 0 0 0 0 1h1a.5.5 0 0 0 0-1z"/>
+        </svg>
+      </div>
+      <div class="login-message-wrapper">
+        <div class="login-message">
+          <p>Veuillez vous connecter pour accéder à l'application.</p>
+          <button class="login-button btn" (click)="login()">Se connecter</button>
+        </div>
+      </div>
+    </div>
+  </ng-template>
+</div>

@@ -1,0 +1,162 @@
+<!-- pages/cgu/cgu.component.ts -->
+<div>
+    <app-navbar/>
+    <div class="container-fluid">
+        <div class="row">
+            <app-sidebar class="col-md-3 col-lg-2 p-0 bg-dark" [pageName]="pageName"/>
+            <main class="col-md-9 ms-sm-auto col-lg-10 px-md-4">
+                <div class="container p-4">
+                    
+                    <h1>Conditions générales d'utilisation</h1>
+
+                    <h2>Table des matières</h2>
+                    
+                    <ol class="table-of-contents">
+                        <li><a href="/cgu#preambule">Préambule</a></li>
+                        <li><a href="/cgu#definition">Définitions</a></li>
+                        <li><a href="/cgu#objet">Objet</a></li>
+                        <li><a href="/cgu#acceptation-opposabilite">Acceptation et opposabilité</a></li>
+                        <li><a href="/cgu#compte-utilisateur">Compte utilisateur</a></li>
+                        <li><a href="/cgu#acces-plateforme">Accès à la plateforme</a></li>
+                        <li><a href="/cgu#securite">Sécurité</a></li>
+                        <li><a href="/cgu#support-maintenance">Support et maintenance</a></li>
+                        <li><a href="/cgu#responsabilite">Responsabilité</a></li>
+                        <li><a href="/cgu#propriete-intellectuelle">Propriété intellectuelle</a></li>
+                        <li><a href="/cgu#liens-hypertextes">Liens hypertextes</a></li>
+                        <li><a href="/cgu#donnees-personnelles">Données personnelles</a></li>
+                        <li><a href="/cgu#resolution-resiliation">Résolution et résiliation des services</a></li>
+                        <li><a href="/cgu#convention-preuve">Convention de preuve</a></li>
+                        <li><a href="/cgu#nullite">Nullité</a></li>
+                        <li><a href="/cgu#loi-applicable">Loi applicable</a></li>
+                    </ol>
+
+                    <h3 id="preambule">1. Préambule</h3>
+
+                    <p>Bienvenue sur l'application météo, développée en Angular, MongoDB et Node.js. Cette application vous permet d'accéder aux prévisions météorologiques en fonction de votre localisation géographique, utilisant l'API Leaflet pour afficher votre position sur une carte interactive et l'API OpenWeather pour obtenir les données météorologiques.</p>
+                    
+                    <h3 id="definition">2. Définitions</h3>
+
+                    <ul>
+                        <li>Utilisateur(s) : Toute personne physique ayant accès aux services et/ou fonctionnalités de la plateforme.</li>
+                        <li>Plateforme : Désigne l'application météo ainsi que toutes ses fonctionnalités et services associés.</li>
+                        <li>Géolocalisation : désigne le processus de détermination de la localisation géographique d'un utilisateur.</li>
+                        <li>API : Interface de Programmation Applicative, permettant la communication entre différentes applications.</li>
+                    </ul>
+
+                    <h3 id="objet">3. Objet</h3>
+
+                    <p>
+                        Les présentes Conditions Générales d'Utilisation ont pour objet de définir les modalités et conditions dans lesquelles les utilisateurs accèdent et utilisent l'application météo.
+                    </p>
+
+                    <h3 id="acceptation-opposabilite">4. Acceptation et opposabilité</h3>
+
+                    <h4>4.1 Acceptation</h4>
+                    <p>
+                        L'accès et l'utilisation de l'application météo impliquent l'acceptation sans réserve des présentes conditions générales d'utilisation par l'utilisateur.
+                    </p>
+
+                    <h4>4.2 Opposabilité</h4>
+                    <p>
+                        Les présentes conditions générales d'utilisation sont opposables à l'utilisateur dès son accès à l'application météo.
+                    </p>
+
+                    <h3 id="compte-utilisateur">5. Compte utilisateur</h3>
+
+                    <p>
+                        L'utilisation de l'application météo ne nécessite pas la création d'un compte utilisateur.
+                    </p>
+
+                    <h3 id="acces-plateforme">6. Accès à la plateforme</h3>
+
+                    <p>
+                        L'accès à la plateforme est gratuit et ouvert à tout utilisateur disposant d'une connexion internet et d'un navigateur web compatible.
+                    </p>
+
+                    <h3 id="securite">7. Sécurité</h3>
+
+                    <p>
+                        Nous nous engageons à mettre en place les mesures de sécurité nécessaires pour protéger les données des utilisateurs et assurer la sécurité de l'application météo.
+                    </p>
+
+                    <h3 id="support-maintenance">8. Support et maintenance</h3>
+
+                    <h4>8.1 Support utilisateur</h4>
+
+                    <p>
+                        Un support utilisateur est disponible pour répondre à toute question ou problème rencontré lors de l'utilisation de l'application météo.
+                    </p>
+
+                    <h4>8.2 Maintenance</h4>
+
+                    <p>
+                        Nous nous réservons le droit d'apporter des modifications et des évolutions à l'application météo afin d'améliorer ses fonctionnalités et performances.
+                    </p>
+
+                    <h3 id="responsabilite">9. Responsabilité</h3>
+                    <h4>9.1 Responsabilité de l'utilisateur</h4>
+
+                    <p>
+                        L'utilisateur est seul responsable de l'utilisation de l'application météo et s'engage à respecter les présentes conditions générales d'utilisation.
+                    </p>
+
+                    <h4>9.2 Responsabilité du développeur</h4>
+
+                    <p>
+                        Nous déclinons toute responsabilité en cas de dommages directs ou indirects causés à l'utilisateur ou à des tiers lors de l'utilisation de l'application météo.
+                    </p>
+
+                    <h3 id="propriete-intellectuelle">10. Propriété intellectuelle</h3>
+
+                    <p>
+                        Tous les éléments constitutifs de l'application météo, notamment le code source, les logos et les contenus, sont protégés par le droit de la propriété intellectuelle et sont la propriété exclusive du développeur.
+                    </p>
+
+                    <h3 id="liens-hypertextes">11. Liens hypertextes</h3>
+
+                    <p>
+                        L'application météo peut contenir des liens hypertextes vers des sites tiers. Nous déclinons toute responsabilité quant au contenu de ces sites et aux éventuels dommages résultant de leur utilisation.
+                    </p>
+
+                    <h3 id="donnees-personnelles">12. Données personnelles</h3>
+
+                    <p>
+                        Les données à caractère personnel collectées lors de l'utilisation de l'application météo sont traitées conformément à notre politique de confidentialité et ne sont pas revendues à des tiers.
+                    </p>
+
+                    <h3 id="resolution-resiliation">13. Résolution et résiliation des services</h3>
+
+                    <h4>13.1 Désinscription et désactivation</h4>
+
+                    <p>
+                        L'utilisateur peut cesser d'utiliser l'application météo à tout moment et sans préavis.
+                    </p>
+
+                    <h4>13.2 Suspension et exclusion</h4>
+
+                    <p>
+                        Nous nous réservons le droit de suspendre ou d'exclure un utilisateur en cas de non-respect des présentes conditions générales d'utilisation.
+                    </p>
+
+                    <h3 id="convention-preuve">14. Convention de preuve</h3>
+
+                    <p>
+                        Les données enregistrées dans le système informatique de l'application météo constituent une preuve de l'ensemble des transactions conclues avec l'utilisateur.
+                    </p>
+
+                    <h3 id="nullite">15. Nullité</h3>
+
+                    <p>
+                        Si l'une des clauses des présentes conditions générales d'utilisation est déclarée nulle ou non applicable, les autres clauses demeurent en vigueur.
+                    </p>
+
+                    <h3 id="loi-applicable">16. Loi applicable</h3>
+
+                    <p>
+                        Les présentes conditions générales d'utilisation sont soumises au droit applicable et tout litige relatif à leur interprétation ou exécution relève de la compétence exclusive des juridictions compétentes.
+                    </p>
+                </div>
+            </main>
+        </div>
+    </div>
+</div>

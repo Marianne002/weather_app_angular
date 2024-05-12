@@ -1,0 +1,32 @@
+#map {
+  height: 100%;
+  width: 100%;
+  border-radius: 25px;
+}
+
+@media (max-width: 1024px) {
+  #map {
+    height: 35vh;
+  }
+}
+
+@media (max-width: 768px) {
+  #map {
+    height: 240px;
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.btn-center {
+  position: absolute;
+  z-index: 999;
+  border: none;
+  right: 0;
+  margin: 20px;
+  bottom: 0;
+  padding: 10px;
+  border-radius: 50%;
+  background: rgb(212, 27, 27);
+  background: linear-gradient(311deg, rgb(209 39 39) 0%, rgb(233 135 30) 70%, rgb(221 208 76) 100%);
+}

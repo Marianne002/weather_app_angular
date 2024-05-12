@@ -1,0 +1,82 @@
+main {
+    height: 100vh;
+    overflow-y: auto;
+}
+
+p{
+    margin: 0;
+}
+
+.dashboard {
+    margin-top: 48px;
+}
+
+.datas {
+    height: 70%;
+    padding-bottom: 20px;
+}
+
+.dashboard img {
+    width: auto;
+    height: 50px;
+}
+.weather-card {
+    padding: 30px;
+    border-radius: 25px;
+    background: #282828;
+    gap: 100px;
+    background: rgb(212, 27, 27);
+    background: linear-gradient(311deg, rgb(209 39 39) 0%, rgb(233 135 30) 70%, rgb(221 208 76) 100%);
+}
+
+.weather-info img {
+    width: auto;
+    height: 100px;
+}
+
+.weather-large {
+    font-size: xxx-large;
+    font-weight: 700;
+}
+
+.weather-medium {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+@media (max-width: 1024px) {
+    .weather-card {
+        height: 45vh !important;
+        padding: 20px;
+        gap: 0px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .datas {
+        gap: 20px;
+    }
+    .dashboard img {
+       display: none;
+    }
+    .weather-card {
+        height: 100% !important;
+        gap: 40px;
+        padding: 20px;
+    }
+    .weather-large {
+        font-size: xx-large;
+        font-weight: 700;
+    }
+    .weather-medium {
+        font-size: large;
+        font-weight: 700;
+    }
+    app-map {
+        padding-bottom: 20px;
+    }
+    svg {
+        width: 30px;
+    }
+}

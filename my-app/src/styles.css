@@ -1,0 +1,45 @@
+body{
+    background-color: #202020;
+    color: white;
+}
+
+.login-message, .accordion::after, .pagination button {
+    background: rgb(212, 27, 27);
+    background: linear-gradient(311deg, rgb(209 39 39) 0%, rgb(233 135 30) 70%, rgb(221 208 76) 100%);
+}
+
+.login-page {
+    height: 100vh;
+}
+
+.login-message {
+    margin-top: 20px;
+    width: 500px;
+    height: fit-content;
+    border-radius: 20px;
+    padding: 30px 40px;
+}
+
+.login-button {
+    background: #202020;
+    color: white;
+    margin-top: 25px;
+    border-radius: 25px;
+    padding: 7px 24px;
+}
+
+@media (max-width: 768px) {
+    .login-page {
+        padding: 20px;
+    }
+    
+    .login-message {
+        width: fit-content;
+        height: max-content;
+    }
+}
+
+.weather-info img {
+    width: auto;
+    height: 100px;
+}

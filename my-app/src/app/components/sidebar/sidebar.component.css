@@ -1,0 +1,42 @@
+.bi {
+    display: inline-block;
+    width: 1rem;
+    height: 1rem;
+}
+
+a {
+    color: rgb(233 135 30) !important;
+}
+  
+.active {
+    color: rgb(212, 27, 27) !important;
+}
+
+.sidebar {
+    margin-top: 48px;
+}
+
+.sidebar > div {
+    position: fixed;
+}
+
+.sidebar .nav-link {
+    font-size: .875rem;
+    font-weight: 500;
+}
+
+.sidebar-heading {
+    font-size: .75rem;
+}
+
+@media (max-width: 768px) {
+    .sidebar {
+        margin-top: 0px;
+    }
+    .sidebar .offcanvas-lg {
+        position: -webkit-sticky;
+        position: sticky;
+        top: 48px;
+    }
+}
+
